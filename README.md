@@ -41,7 +41,7 @@ So lets start with cronjobs. We can check our cronjobs like this
 ```
 crontab -l
 ```
-Be sure to check roots crontab as well as your own user. If a suspicious entry is preset, you can stop it from executing by placing a # at the beginning of the line.<br><br>
+Be sure to check roots crontab as well as your own user. If a suspicious entry is present, you can stop it from executing by placing a # at the beginning of the line.<br><br>
 Now lets move on to dkms
 ```
 sudo dkms status
