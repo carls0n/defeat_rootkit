@@ -1,4 +1,4 @@
-# Defeating  ftrace based rootkits
+# Defeating ftrace based LKM rootkits
 
 Let's get right to it!
 
