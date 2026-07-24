@@ -1,5 +1,7 @@
 # Defeating  ftrace based rootkits
 
+Let's get right to it!
+
 Defeating ftrace based rootkits IS possible. Here, I will show you a few things that might be of help to you in identifying and disabling ftrace based rootkits..
 First, we are going to look at kernel tracing. Very simple to do, yet a very powerful tool!<br><br>
 
