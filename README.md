@@ -16,7 +16,7 @@ tcp6_seq_show (1) R I     M 	tramp: 0xffffffffc05dd000 (fh_ftrace_thunk+0x0/0xa0
 ```
 
 We can see exactly what is being hooked as well as the name of the kernel module doing the hooking! This shows us the module [deception] is at work here, even though the module is hidden.
-This is extremely helpful. Here the module was inserted without its name being changed. So we now know that the rootkit deception is installed on out system.
+This is extremely helpful. Here the module was inserted without its name being changed. So we now know that the rootkit deception is installed on our system.
 If you want to further inspect what the module is doing, you can temporarily disable ftrace in order to see what the module is doing. I.E, hiding ports or processes.
 ```
 sudo sysctl kernel.ftrace_enabled=0
