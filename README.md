@@ -6,7 +6,7 @@ Defeating ftrace based rootkits IS possible. Here, I will show you a few things 
 First, we are going to look at kernel tracing. Very simple to do, yet a very powerful tool!<br><br>
 
 ```
-sudo cat /says/kernel/tracing/enabled_functions
+sudo cat /sys/kernel/tracing/enabled_functions
 ```
 Below we can see an example of what this can tell us.
 
