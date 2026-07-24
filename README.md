@@ -71,6 +71,5 @@ sudo mv /etc/modules-load.d/filename.conf /etc/modules-load.d/filename.conf.disa
 ```
 
 Once you have identified the modules means of staying persistent and have followed these steps, simply reboot and your system should be free of the rootkit!
-```
 
 
