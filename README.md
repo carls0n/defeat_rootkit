@@ -23,7 +23,7 @@ sudo sysctl kernel.ftrace_enabled=0
 ```
 Once you run this command, you can use system tools like ss and netstat and ps to show you what the rootkit has been hiding from you and what it is currently doing.<br>
 
-Since we now know the name of the  module (in this case), the rootkits name, we can look at options to completely disable and remove it. A lot of rootkits have simple kill commands to control the kernel module such as kill -63 0
+Since we now know the name of the rootkit, we can look at options to completely disable and remove it. A lot of rootkits have simple kill commands to control the kernel module such as kill -63 0
 to make module visible in lsmod or kill -64 0 to give root privileges. We can simply use
 ```
 kill -63 0
