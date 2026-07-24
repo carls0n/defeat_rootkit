@@ -37,7 +37,8 @@ sudo rmmod deception
 However, in the case of deception, the exact command is variable according to a user defined PID (or magic number). For example, the exact command to reveal the module might be kill -63 8000. So we don't know in this case
 what the exact command is. So now what? Let's assume the module has not been made persistent by the use of a cronjob, dkms or a service file. Also, /etc/modules-load.d/ (variable on different distros) can load modules while
 booting. A kernel module, once inserted, if not made persistent, can be cleared from the kernel simply by rebooting. If a reboot does not resolve the problem, it might be being made persistent by one of these methods.
-So lets start with cronjobs. We can check our cronjobs like this
+### What if a reboot doesn't clear the kernel of suspected rootkit?
+So... lets start with cronjobs. We can check our cronjobs like this
 ```
 crontab -l
 ```
