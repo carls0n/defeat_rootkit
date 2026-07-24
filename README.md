@@ -70,6 +70,34 @@ You can disable it like this
 sudo mv /etc/modules-load.d/filename.conf /etc/modules-load.d/filename.conf.disabled
 ```
 
-Once you have identified the modules means of staying persistent and have followed these steps, simply reboot and your system should be free of the rootkit!
+Once you have identified the modules means of staying persistent and have followed these steps, simply reboot and your system should be free of the rootkit!<br>
+### What about LKM rootkits that don't use ftrace?
+In the case of diamorphine rootkit or other rootkits which use kprobes. You can identify the hidden module as well as a list of available kernel functions using
+```
+sudo cat /sys/kernel/tracing/available_filter_functions
+```
+And the result in the case of diamorphine
+```
+hacked_getdents64 [diamorphine]
+hacked_getdents [diamorphine]
+resolve_sym [diamorphine]
+get_syscall_table_bf [diamorphine]
+find_task [diamorphine]
+is_invisible [diamorphine]
+give_root [diamorphine]
+module_show [diamorphine]
+module_hide [diamorphine]
+hacked_kill [diamorphine]
+flipswitch_func [diamorphine]
+```
+Diamorphine LKM as we know is revealed in lsmod with
+```
+kill -63 0
+```
+Once revealed, you can remove it using
+```
+sudo rmmod diamorphine
+```
+
 
 
