@@ -73,7 +73,7 @@ sudo mv /etc/modules-load.d/filename.conf /etc/modules-load.d/filename.conf.disa
 
 Once you have identified the modules means of staying persistent and have followed these steps, simply reboot and your system should be free of the rootkit!<br>
 ### What about LKM rootkits that don't use ftrace?
-In the case of diamorphine rootkit or other rootkits which use kprobes. You can identify the hidden module as well as a list of available kernel functions using
+In the case of diamorphine rootkit or other rootkits which use kprobes, you can identify the hidden module as well as a list of available kernel functions using
 ```
 sudo cat /sys/kernel/tracing/available_filter_functions
 ```
